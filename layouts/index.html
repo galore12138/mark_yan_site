@@ -1,0 +1,127 @@
+{{ define "main" }}
+<div class="page-shell">
+  <section class="hero" aria-labelledby="hero-name">
+    <div class="portrait-wrap">
+      <img class="portrait" src="{{ site.Params.photo | relURL }}" alt="Portrait of Mark (Yuzhi) Yan" width="240" height="240">
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">{{ site.Params.role }}</p>
+      <h1 id="hero-name">Mark (Yuzhi) Yan</h1>
+      <p class="affiliation">{{ site.Params.department }}<br>{{ site.Params.school }}, {{ site.Params.university }}</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ site.Params.cv | relURL }}">Download CV</a>
+        <a class="button button-secondary" href="mailto:{{ site.Params.email }}">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="bio" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Bio & C.V.</p>
+      <h2>About</h2>
+    </div>
+    <div class="prose">{{ .Content }}</div>
+    <div id="research-areas" class="keyword-list" aria-label="Research areas">
+      {{ range site.Data.research_areas }}
+        <span>{{ .name }}</span>
+      {{ end }}
+    </div>
+    <div class="education-grid">
+      {{ range site.Data.education }}
+        <article class="mini-card">
+          <p class="meta">{{ .date }}</p>
+          <h3>{{ .degree }}</h3>
+          <p>{{ .institution }}</p>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section id="writings" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Research</p>
+      <h2>Research Papers</h2>
+    </div>
+    <div class="paper-list">
+      {{ range sort site.Data.papers "order" }}
+        <article class="paper-item" data-area="{{ .area }}">
+          <div class="paper-topline">
+            <span class="status">{{ .status }}</span>
+            <span class="meta">{{ .year }}</span>
+          </div>
+          <h3>{{ if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h3>
+          <p class="paper-authors">{{ .authors | safeHTML }}</p>
+          <p class="meta">{{ .venue }}</p>
+          {{ with .description }}<p>{{ . }}</p>{{ end }}
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section id="talks" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Conference</p>
+      <h2>Conference</h2>
+    </div>
+    <div class="talk-grid">
+      {{ range site.Data.talks }}
+        <article class="talk-item">
+          <span class="talk-year">{{ .year }}</span>
+          <div>
+            <h3>{{ .title }}</h3>
+            {{ with .role }}<p class="meta">{{ . }}</p>{{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section id="teaching" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Teaching</p>
+      <h2>Courses</h2>
+    </div>
+    <div class="split-grid">
+      {{ range site.Data.teaching }}
+        <article class="mini-card">
+          <p class="meta">{{ .institution }}</p>
+          <h3>{{ .course }}</h3>
+          <ul>
+            {{ range .evaluations }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section id="grants" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Grants</p>
+      <h2>Funded Research</h2>
+    </div>
+    <div class="paper-list">
+      {{ range site.Data.grants }}
+        <article class="paper-item">
+          <div class="paper-topline">
+            <span class="status">{{ .role }}</span>
+            <span class="meta">{{ .reference }}</span>
+          </div>
+          <h3>{{ .title }}</h3>
+          <p class="meta">{{ .funder }}</p>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Get in touch</h2>
+      <p>{{ site.Params.department }}, {{ site.Params.school }}, {{ site.Params.university }}, {{ site.Params.address }}</p>
+    </div>
+    <a class="contact-link" href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+  </section>
+</div>
+{{ end }}

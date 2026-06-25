@@ -1,0 +1,12 @@
+- institution: "Hong Kong Baptist University"
+  course: "Intermediate Accounting I"
+  evaluations:
+    - "4.55/5.0, Fall 2021"
+    - "4.31/5.0, Fall 2022"
+    - "4.60/5.0, Fall 2023"
+    - "4.65/5.0, Fall 2024"
+    - "4.65/5.0, Fall 2025"
+- institution: "University of Arizona"
+  course: "Introduction to Accounting"
+  evaluations:
+    - "4.86/5.0, Winter 2017"

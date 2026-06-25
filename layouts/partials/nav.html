@@ -1,0 +1,19 @@
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="{{ site.Home.RelPermalink }}">MARK (YUZHI) YAN</a>
+    <div class="desktop-menu">
+      {{ range site.Menus.main }}
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+      <button class="search-icon" type="button" aria-label="Search" title="Search">⌕</button>
+    </div>
+    <details class="mobile-menu">
+      <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
+      <div class="mobile-menu-panel">
+        {{ range site.Menus.main }}
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
+    </details>
+  </nav>
+</header>

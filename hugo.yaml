@@ -1,0 +1,56 @@
+baseURL: "https://galore12138.github.io/mark_yan_site/"
+title: "Mark (Yuzhi) YAN"
+languageCode: "en-us"
+enableRobotsTXT: true
+
+params:
+  description: "Mark (Yuzhi) Yan is an Assistant Professor in Accounting at Hong Kong Baptist University."
+  author: "Mark (Yuzhi) YAN"
+  email: "markyan@hkbu.edu.hk"
+  role: "Assistant Professor in Accounting"
+  school: "School of Business"
+  department: "Department of Accountancy, Economics and Finance"
+  university: "Hong Kong Baptist University"
+  address: "Kowloon Tong, Hong Kong"
+  photo: "images/mark-yan.jpg"
+  cv: "files/mark-yan-cv.pdf"
+  keywords:
+    - "Mark Yan"
+    - "Yuzhi Yan"
+    - "Hong Kong Baptist University"
+    - "Accounting"
+    - "Corporate disclosure"
+    - "Debt contracting"
+    - "Banking"
+    - "Capital markets"
+  sameAs:
+    - "https://galore12138.github.io/mark_yan_site/"
+
+menu:
+  main:
+    - name: "Bio & C.V."
+      url: "/#bio"
+      weight: 10
+    - name: "Research"
+      url: "/#writings"
+      weight: 20
+    - name: "Conference"
+      url: "/#talks"
+      weight: 30
+    - name: "Teaching"
+      url: "/#teaching"
+      weight: 40
+    - name: "Grants"
+      url: "/#grants"
+      weight: 50
+    - name: "Contact"
+      url: "/#contact"
+      weight: 60
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+module:
+  imports: []
