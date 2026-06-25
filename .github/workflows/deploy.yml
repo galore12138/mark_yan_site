@@ -40,7 +40,7 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           TZ: Asia/Hong_Kong
-        run: hugo --gc --minify --baseURL "https://galore12138.github.io/mark_yan_site/"
+        run: hugo --gc --minify --baseURL "https://mark-yan-accounting.com/"
 
       - name: Build Pagefind search index
         run: npx pagefind --site public

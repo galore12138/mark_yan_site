@@ -1,4 +1,4 @@
-baseURL: "https://galore12138.github.io/mark_yan_site/"
+baseURL: "https://mark-yan-accounting.com/"
 title: "Mark (Yuzhi) YAN"
 languageCode: "en-us"
 enableRobotsTXT: true
@@ -24,7 +24,7 @@ params:
     - "Banking"
     - "Capital markets"
   sameAs:
-    - "https://galore12138.github.io/mark_yan_site/"
+    - "https://mark-yan-accounting.com/"
 
 menu:
   main:
