@@ -1,5 +1,5 @@
 ---
-title: "Mark (Yuzhi) YAN"
+title: "Mark (Yuzhi) YAN 严育之"
 ---
 
 I am an Assistant Professor in Accounting at Hong Kong Baptist University. I joined HKBU in 2021 after completing my Ph.D. in Accounting at the University of Arizona.
