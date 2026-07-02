@@ -43,9 +43,7 @@ menu:
     - name: "Grants"
       url: "/#grants"
       weight: 50
-    - name: "Contact"
-      url: "/#contact"
-      weight: 60
+
 
 markup:
   goldmark:
